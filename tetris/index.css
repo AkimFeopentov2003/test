@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: 100svh;
+    background: linear-gradient(90deg, #395492, #0099c9, #3dd5ab);
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+grid.{
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(20, auto);
+    padding: 0.6vh;
+    gap: 0.3vh;
+    border-radius: 0.6vh;
+    background-color: rgba(1, 8, 89, 0.5);
+}
+#root{
+    padding: 3rem;
+    text-align: center;
+}
+
+#root h1{
+    color: white;
+}
+
+#root canvas {
+    display: block;
+    margin: 0 auto;
+    /* border: 4px solid white; */
+}
