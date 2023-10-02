@@ -32,6 +32,15 @@ export default class Game{
         isGameOver: this.end
     }
    }
+   clearGame(){
+       this.score = 0;
+       this.lines = 0;
+       this.level = 0;
+       this.end = false;
+       this.playfield = this.createPlayfield();
+       this.activePiece = this.createPiece();
+       this.nextPiece = this.createPiece();
+   }
    createPlayfield(){
     const playfield = [];
     for(let y =0; y < this.sizeY ; y++){

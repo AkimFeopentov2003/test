@@ -1,9 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-}
 
 body {
     display: flex;
@@ -16,7 +10,7 @@ body {
     user-select: none;
 }
 
-grid.{
+grid{
     display: grid;
     grid-template-columns: repeat(10, auto);
     grid-template-rows: repeat(20, auto);

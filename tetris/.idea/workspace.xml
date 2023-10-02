@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbfed5bf-c386-4616-811e-789f08f7dc91" name="Changes" comment="" />
+    <list default="true" id="a52c222f-6dba-4b56-becd-9c9330b1345b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
-  <component name="ProjectId" id="2VYilnXDYWdNJlloFiV0z9MC7eT" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2VttwqxNWV4enbuC0eYyejnhmIg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -20,19 +27,36 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Public_html/localhost/www/tetris",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/var/www/tetris",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+    ]
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fbfed5bf-c386-4616-811e-789f08f7dc91" name="Changes" comment="" />
-      <created>1695019567556</created>
+      <changelist id="a52c222f-6dba-4b56-becd-9c9330b1345b" name="Changes" comment="" />
+      <created>1695667446092</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695019567556</updated>
-      <workItem from="1695019568610" duration="16000" />
+      <updated>1695667446092</updated>
+      <workItem from="1695667447113" duration="324000" />
+      <workItem from="1696169219096" duration="5803000" />
+      <workItem from="1696182246323" duration="530000" />
+      <workItem from="1696183281464" duration="3853000" />
+      <workItem from="1696187423950" duration="204000" />
+      <workItem from="1696187639899" duration="2806000" />
+      <workItem from="1696234029019" duration="1185000" />
     </task>
     <servers />
   </component>

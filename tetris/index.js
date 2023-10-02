@@ -2,6 +2,7 @@ import Game from './src/model.js';
 import View from './src/view.js';
 import Controller from './src/controller.js';
 
+
 const root = document.querySelector('#root');
 
 const game = new Game();

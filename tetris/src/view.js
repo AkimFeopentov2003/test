@@ -62,9 +62,8 @@ renderPauseScreen() {
     this.context.textBaseline = 'middle';
     this.context.fillText('Press ENTER to Pause', this.width / 2, this.height / 2);
 }
-renderEndScreen({}) {
+renderEndScreen({score}) {
     this.clearScrin();
-
 
     this.context.fillStyle = 'white';
     this.context.font = '18px "Press Start 2P"';
@@ -73,6 +72,9 @@ renderEndScreen({}) {
     this.context.fillText('GAME OVER', this.width / 2, this.height / 2 - 48);
     this.context.fillText(`Score: ${score}`, this.width / 2, this.height / 2);
     this.context.fillText('Press ENTER to Restart', this.width / 2, this.height / 2 + 48);
+    console.log("zcget");
+    setTimeout(() => { console.log("World!"); }, 2000);
+    // this.printRecordTable(this.height / 2 + 48, 20);
 }
 renderPlayfield({playfield, color}){
     for(let y = 0; y < playfield.length; y++){
@@ -123,6 +125,32 @@ renderPanel({level, score, lines, nextPiece}){
         }
     }
 }
+
+
+    printRecordTable(stepPX, n){
+        this.context.fillStyle = 'white';
+        this.context.textAlign = 'center';
+        this.context.textBaseline = 'middle';
+        let records = [];
+
+        for(let i = 0; i < localStorage.length % 10; i++){
+            let name = localStorage.key(i);
+            if(name === 'null')
+                continue;
+            let score = localStorage.getItem(name);
+            records.push({name, score});
+        }
+        console.log("aaaa");
+        records.sort((a, b) =>{
+            return parseInt(b.score) - parseInt(a.score);
+        });
+        records.forEach((record) => {
+            this.context.fillText(record.name, this.width / 2, stepPX * ++n);
+            this.context.fillText(record.score, this.width / 2, stepPX * n);
+            console.log("bbb");
+        })
+
+    }
 
 renderBlock(x, y, width, height, color){
     this.context.fillStyle = color;

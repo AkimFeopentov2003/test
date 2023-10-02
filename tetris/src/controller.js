@@ -4,9 +4,6 @@ export default class Controller{
         this.view = view;
         this.isPlaying = false;
         this.intervaiId = null;
-
-
-
         document.addEventListener('keydown', this.handleKeyDown.bind(this));
         document.addEventListener('keyup', this.handleKeyUp.bind(this));
         this.view.renderStartScreen();
@@ -30,15 +27,21 @@ export default class Controller{
     }
 
     reset(){
-        this.game.reset();
+        this.stopTimer();
+        this.game.clearGame();
         this.play();
-
     }
 
     updateView(){
         const state = this.game.getState();
         if(state.isGameOver){
+            this.stopTimer();
+            name = localStorage.getItem("username");
+            localStorage.removeItem('username');
+            localStorage.setItem(name, game.score + '');
+            console.log("renderEndScreen");
             this.view.renderEndScreen(state);
+            //return;
         }
         if(!this.isPlaying){
             this.view.renderPauseScreen();
@@ -48,14 +51,13 @@ export default class Controller{
         }
     }
     startTimer(){
-        const speed = 1000 - this.game.getState().level * 1000;
+        const speed = 1000 - this.game.getState().level * 10;
         if(!this.intervaiId){
             this.intervaiId = setInterval(() =>{
                 this.update();
             }, speed > 0 ? speed : 100);
         }
     }
-
     stopTimer(){
         if(this.intervaiId){
             clearInterval(this.intervaiId);
@@ -64,6 +66,8 @@ export default class Controller{
     }
     handleKeyDown(event){
         const state = this.game.getState();
+        if(state.isGameOver && event.keyCode !== 13)
+            return;
         switch(event.keyCode){
             case 13: //Enter
                 if(state.isGameOver){
